@@ -1,31 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RoutesRoutingModule } from './routes/routes-routing.module';
-import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
-import { IndexComponent } from './modules/index/index.component';
-import { MoviesComponent } from './modules/movies/movies.component';
-import { LoginComponent } from './modules/login/login.component';
-import { RegisterComponent } from './modules/register/register.component';
-import { TheaterComponent } from './modules/theater/theater.component';
-import { HeaderComponent } from './modules/header/header.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { MainComponent } from './main/main.component';
+import { InitPageComponent } from './init-page/init-page.component';
+import { HeaderComponent } from './main/header/header.component';
+import { MainMenuComponent } from './main/main-menu/main-menu.component';
+import { BodyComponent } from './main/body/body.component';
+import { ListComponent } from './main/body/list/list.component';
+import { DetailComponent } from './main/body/detail/detail.component';
+import { PlayerComponent } from './main/body/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent,
-    MoviesComponent,
     LoginComponent,
     RegisterComponent,
-    TheaterComponent,
-    HeaderComponent
+    MainComponent,
+    InitPageComponent,
+    HeaderComponent,
+    MainMenuComponent,
+    BodyComponent,
+    ListComponent,
+    DetailComponent,
+    PlayerComponent
   ],
   imports: [
-    BrowserModule,
-    RoutesRoutingModule,
-    FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
