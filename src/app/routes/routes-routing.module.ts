@@ -1,37 +1,46 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { IndexComponent } from '../modules/index/index.component';
-import { LoginComponent } from '../modules/login/login.component';
-import { MoviesComponent } from '../modules/movies/movies.component';
-import { RegisterComponent } from '../modules/register/register.component';
-import { TheaterComponent } from '../modules/theater/theater.component';
+import { Routes, RouterModule, Router } from '@angular/router';
+import { InitPageComponent } from '../init-page/init-page.component';
+import { LoginComponent } from '../login/login.component';
+import { MainComponent } from '../main/main.component';
+import { RegisterComponent } from '../register/register.component';
+import { patch } from 'webdriver-js-extender';
+import { DetailComponent } from '../main/body/detail/detail.component';
+import { ListComponent } from '../main/body/list/list.component';
+
 
 const routes: Routes = [
   {
     path: "index",
-    component: IndexComponent
+    component: InitPageComponent
   },
   {
     path: "login",
     component: LoginComponent
   },
   {
-    path: "movies",
-    component: MoviesComponent
+    path: "main",
+    component: MainComponent,
+    children:[
+      {
+        path:"detail",
+        component: DetailComponent
+      },
+      {
+        path:'list',
+        component:ListComponent
+      }
+    ]
   },
   {
     path: "register",
     component: RegisterComponent
-  },
-  {
-    path: "theater",
-    component: TheaterComponent
   }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class RoutesRoutingModule { }

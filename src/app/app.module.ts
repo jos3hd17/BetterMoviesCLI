@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RoutesRoutingModule } from './routes/routes-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -12,6 +12,7 @@ import { BodyComponent } from './main/body/body.component';
 import { ListComponent } from './main/body/list/list.component';
 import { DetailComponent } from './main/body/detail/detail.component';
 import { PlayerComponent } from './main/body/player/player.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PlayerComponent } from './main/body/player/player.component';
     PlayerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutesRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

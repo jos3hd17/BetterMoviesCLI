@@ -1,3 +1,26 @@
-<p>
-  init-page works!
-</p>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="color:white;background-image: url('../../assets/wallpaper.jpg')">
+    <header class="masthead mb-auto justify-content-center">
+      <div class="inner">
+        <h3 class="masthead-brand">BetterMovies</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" [routerLink]="['/main/list']">Ver Ahora</a>
+          <a class="nav-link" [routerLink]="['/login']">Ingresar</a>
+          <a class="nav-link" [routerLink]="['/register']">Registro</a>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover" style="text-align: left;width: 70%;margin-right:20%">
+      <h1 class="cover-heading">Entretente</h1>
+      <p class="lead">Disfruta ahora, del mejor contenido multimedia, peliculas, series, animaciones, y mucho mas con las personas que mas aprecias, y lo mejor de todo es que ¡Es gratis! </p>
+      <p class="lead">
+        <a [routerLink]="['/main/list']" class="btn btn-lg btn-secondary">Ver ahora</a>
+      </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+       by <a href="">Los Goopers</a>.
+      </div>
+    </footer>
+  </div>
